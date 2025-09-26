@@ -4,14 +4,12 @@ require_once __DIR__ . "/../core/Database.php";
 class Produto {
     
 
-    /**
-     * Busca um produto específico pelo seu ID e pelo ID do usuário.
-     */
+    # Busca um produto específico pelo seu ID e pelo ID do usuário.
+    
     public static function buscarPorId(int $id, int $usuario_id) {
         $db = new Database();
         $pdo = $db->getConnection();
         
-        // SQL com múltiplos placeholders
         $sql = "SELECT * FROM produtos WHERE id = ? AND usuario_id = ? LIMIT 1";
         
         $stmt = $pdo->prepare($sql);
@@ -33,9 +31,9 @@ class Produto {
 
         $params = [];
 
-        // Se um termo de busca foi fornecido, adiciona a condição WHERE
+        # Se um termo de busca foi fornecido, adiciona a condição WHERE
         if ($termoBusca) {
-            // Usamos LIKE para buscar por partes do nome
+            # Usamos LIKE para buscar por partes do nome
             $sql .= " WHERE produtos.nome LIKE ?";
             $params[] = '%' . $termoBusca . '%';
         }
@@ -47,9 +45,9 @@ class Produto {
         
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    /**
-     * Cria um novo produto no banco de dados.
-     */
+    
+    #    Cria um novo produto no banco de dados.
+     
     public static function create(string $nome, int $quantidade, float $preco, int $usuario_id, ?string $sku, ?string $categoria, ?string $fornecedor, ?string $descricao, ?string $imagem) {
         $db = new Database();
         $pdo = $db->getConnection();
@@ -63,10 +61,9 @@ class Produto {
     }
 
 
-    /**
-     * Atualiza os dados de um produto existente.
-     */
-
+     
+    # Atualiza os dados de um produto existente.
+    
     public static function update(int $id, string $nome, int $quantidade, float $preco, int $usuario_id, ?string $sku, ?string $categoria, ?string $fornecedor, ?string $descricao, ?string $imagem) {
     $db = new Database();
     $pdo = $db->getConnection();    
@@ -79,9 +76,8 @@ class Produto {
     return $stmt->execute([$nome, $quantidade, $preco, $sku, $categoria, $fornecedor, $descricao, $imagem, $id, $usuario_id]);
 }
 
-    /**
-     * Deleta um produto do banco de dados.
-     */
+     # Deleta um produto do banco de dados.
+     
     public static function delete(int $id, int $usuario_id) {
         
         $db = new Database();

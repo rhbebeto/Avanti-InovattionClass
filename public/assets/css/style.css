@@ -126,14 +126,14 @@ body {
 
 /* Estilo base compartilhado pelos botões de Editar e Excluir */
 .btn-edit, .btn-delete {
-    padding: 8px 16px;          /* Mais espaço nas laterais */
+    padding: 8px 16px;          
     border-radius: 12px;        /* Bordas bem arredondadas para o formato "pílula" */
     border: 1px solid;
     cursor: pointer;
     display: inline-flex;       /* Usamos inline-flex para alinhar ícone e texto */
     align-items: center;
-    gap: 8px;                   /* Espaço entre o ícone e o texto */
-    font-weight: 600;           /* Fonte em "semi-bold" */
+    gap: 8px;                  
+    font-weight: 600;           
     font-size: 14px;
     text-decoration: none;
     transition: all 0.2s ease-in-out; /* Transição suave para o hover */
@@ -141,25 +141,25 @@ body {
 
 /* Estilos específicos para o botão EDITAR */
 .btn-edit {
-    background-color: #f8fafc;  /* Fundo cinza muito claro (quase branco) */
-    border-color: #e2e8f0;      /* Borda cinza claro */
-    color: #334155;             /* Texto escuro */
+    background-color: #f8fafc; 
+    border-color: #e2e8f0;      
+    color: #334155;             
 }
 
 .btn-edit:hover {
-    background-color: #f1f5f9;  /* Fundo um pouco mais escuro no hover */
+    background-color: #f1f5f9;  
     border-color: #cbd5e1;
 }
 
 /* Estilos específicos para o botão EXCLUIR */
 .btn-delete {
-    background-color: #ef4444;  /* Cor vermelha principal */
-    border-color: #ef4444;      /* Borda da mesma cor */
-    color: white;               /* Texto branco */
+    background-color: #ef4444;  
+    border-color: #ef4444;      
+    color: white;               
 }
 
 .btn-delete:hover {
-    background-color: #dc2626;  /* Vermelho mais escuro no hover */
+    background-color: #dc2626;  
     border-color: #dc2626;
 }
 
@@ -308,7 +308,7 @@ td.actions {
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background-color: #1abc9c; /* Cor verde/azul do botão */
+    background-color: #1abc9c; 
     color: white;
     font-size: 16px;
     font-weight: 700;
@@ -329,8 +329,8 @@ td.actions {
 }
 
 .alert-warning {
-    background-color: #fce8cc; /* Fundo laranja do alerta */
-    color: #fa5e20; /* Texto do alerta */
+    background-color: #fce8cc; 
+    color: #fa5e20; 
     padding: 12px;
     border-radius: 8px;
     text-align: center;
@@ -504,7 +504,7 @@ td.actions {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px; /* <--- ESTA É A PROPRIEDADE RESPONSÁVEL */
+    border-radius: 8px; 
     box-sizing: border-box;
     font-size: 16px;
     background-color: white;
@@ -569,7 +569,7 @@ td.actions {
 
     /* --- Cabeçalho Principal --- */
     .site-header {
-        padding: 0 15px; /* Menos padding lateral */
+        padding: 0 15px; 
     }
     .header-brand h3 {
         display: none; /* Esconde o título principal para economizar espaço */
@@ -579,7 +579,7 @@ td.actions {
         display: none;
     }
     .container {
-        margin-top: 60px; /* Mantém a margem do header que não muda de altura */
+        margin-top: 60px; 
     }
 
     /* --- Cabeçalho da Página --- */
@@ -626,8 +626,8 @@ td.actions {
     }
     
     td {
-        display: flex; /* USA FLEXBOX DENTRO DA CÉLULA */
-        justify-content: space-between; /* Alinha o rótulo e o valor */
+        display: flex; 
+        justify-content: space-between; 
         align-items: center;
         padding: 12px 15px;
         text-align: right;

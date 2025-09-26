@@ -7,7 +7,7 @@ class Database {
     private $password = "root";
     private $conn;
 
-    // construtor já tenta abrir a conexão
+    # construtor já tenta abrir a conexão
     public function __construct() {
         try {
             #Cria a instância do PDO para estabelecer a conexão
@@ -22,7 +22,7 @@ class Database {
         }
     }
 
-    // Retorna a instância da conexão já estabelecida
+    # Retorna a instância da conexão já estabelecida
     public function getConnection() {
         return $this->conn;
     }

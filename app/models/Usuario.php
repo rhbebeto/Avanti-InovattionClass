@@ -9,7 +9,7 @@
          $pdo = $db->getConnection();
          $sql = "SELECT * FROM usuarios WHERE username = ?";
          $stmt = $pdo->prepare($sql);
-         // 2. Executa a query passando os dados de forma segura
+         # Executa a query passando os dados de forma segura
          $stmt->execute([$nome]);
          return $stmt->fetch(PDO::FETCH_ASSOC);
      }
