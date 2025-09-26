@@ -43,7 +43,7 @@ Para rodar este projeto localmente, siga os passos abaixo.
 
 1.  **Clone o repositório:**
     ```bash
-        git clone [https://github.com/rhbebeto/Avanti-InovattionClass.git](https://github.com/rhbebeto/Avanti-InovattionClass.git)
+        git clone https://github.com/rhbebeto/Avanti-InovattionClass.git
 
     ```
 
